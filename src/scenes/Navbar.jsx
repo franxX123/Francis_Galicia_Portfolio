@@ -23,12 +23,17 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   );
 };
 
-const Navbar = ({ selectedPage, setSelectedPage }) => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
+  const navbarBackground = isTopOfPage ? "" : "bg-red";
 
   return (
-    <nav className={`z-40 w-full fixed top-0 py-6`}>
+    <nav
+      className={`${
+        isAboveSmallScreens ? navbarBackground : ""
+      } z-40 w-full fixed top-0 py-6`}
+    >
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h2 className="font-playfair text-3xl font-bold text-white">FG</h2>
         {
@@ -92,9 +97,10 @@ const Navbar = ({ selectedPage, setSelectedPage }) => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    className="opacity-50 group-hover:opacity-80 transition duration-100"
+                    className="opacity-50 group-hover:scale-105 group-hover:opacity-60 transition duration-250"
                     d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
                     fill="white"
+                    hyy8
                   />
                 </svg>
               </button>

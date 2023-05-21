@@ -9,5 +9,11 @@ body,
 .app {
   height: 100%;
   background-color: #010026;
-  @apply: text-white;
+  @apply text-white;
+}
+
+span {
+  background-image: url("./assets/brush.png");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
