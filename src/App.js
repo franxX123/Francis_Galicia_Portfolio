@@ -3,6 +3,11 @@ import useMediaQuery from "./hooks/useMediaQuery";
 import Navbar from "./scenes/Navbar";
 import DotGroup from "./scenes/DotGroup";
 import Landing from "./scenes/Landing";
+import Projects from "./scenes/Projects";
+import Contact from "./scenes/Contact";
+import MySkills from "./scenes/MySkills";
+import Footer from "./scenes/Footer";
+import LineGradient from "./components/LineGradient";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -43,6 +48,27 @@ function App() {
           )}
           <Landing setSelectedPage={setSelectedPage} />
         </div>
+
+        {/* NOTE: LineGradient acts as a separator */}
+        {/* SKILLS */}
+        <LineGradient />
+        <div className="w-5/6 mx-auto md:h-full">
+          <MySkills />
+        </div>
+
+        {/* PROJECTS */}
+        <LineGradient />
+        <div className="w-5/6 mx-auto">
+          <Projects />
+        </div>
+
+        {/* Contact */}
+        <LineGradient />
+        <div className="w-5/6 mx-auto md:h-full">
+          <Contact />
+        </div>
+
+        <Footer />
       </div>
     </>
   );

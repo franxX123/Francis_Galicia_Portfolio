@@ -52,7 +52,7 @@ const Landing = ({ setSelectedPage }) => {
             Jane {""}
             {/* xs:font-semibold z-20 xs:before:content-brush before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1] */}
             <span
-              className={`xs:relative xs:text-deep-blue xs:font-semibold z-20 before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1] height:100%`}
+              className={`xs:relative  xs:font-semibold z-20 before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1] height:100%`}
             >
               Esper
             </span>
