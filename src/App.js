@@ -38,7 +38,7 @@ function App() {
           isTopOfPage={isTopOfPage}
           selectedPage={selectedPage}
           setSelectedPage={setSelectedPage}
-        ></Navbar>
+        />
         <div className="w-5/6 mx-auto md:h-full">
           {isAboveMediumScreens && (
             <DotGroup
@@ -49,7 +49,7 @@ function App() {
           <Landing setSelectedPage={setSelectedPage} />
         </div>
 
-        {/* NOTE: LineGradient acts as a separator */}
+        {/* NOTE: LineGradient for separation */}
         {/* SKILLS */}
         <LineGradient />
         <div className="w-5/6 mx-auto md:h-full">

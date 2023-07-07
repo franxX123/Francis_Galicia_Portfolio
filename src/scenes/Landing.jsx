@@ -49,12 +49,16 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Jane {""}
+            Francis
             {/* xs:font-semibold z-20 xs:before:content-brush before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1] */}
             <span
-              className={`xs:relative  xs:font-semibold z-20 before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1] height:100%`}
+              // NOTE: Before pseudo element is to add a backGroundImage to a span element.
+              // z-index shows the background in the back and the text in the front.
+              className={
+                "xs:relative xs:font-semibold height:100% z-20 before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
+              }
             >
-              Esper
+              Galicia
             </span>
           </p>
           <p className="mt-10 mb-7 text-sm text-center md:text-start">

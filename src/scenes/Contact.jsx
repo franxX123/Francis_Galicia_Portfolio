@@ -11,6 +11,7 @@ const Contact = () => {
   } = useForm();
 
   const onSubmit = async (e) => {
+    // NOTE: Trigger checks validation on all fields before submission
     const isValid = await trigger();
 
     if (!isValid) {
