@@ -1,7 +1,7 @@
 import LineGradient from "../components/LineGradient";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import SkillsPic from "../assets/skills-image.png";
+// import SkillsPic from "../assets/skills-image.png";
 
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
@@ -9,9 +9,9 @@ const MySkills = () => {
   return (
     <section id="skills" className="pt-10 pb-24">
       {/* Header and image section */}
-      <div className="md:flex md:justify-between md:gap-16 mt-32">
+      <div className="flex justify-center gap-16 mt-32 ">
         <motion.div
-          className="md:w-1/3"
+          className="md:w-2/3"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -24,19 +24,23 @@ const MySkills = () => {
             },
           }}
         >
-          <p className="font-playfair font-semibold text-4xl mb-5">
-            MY <span className="text-red">SKILLS</span>
+          <p className="font-playfair font-semibold text-4xl mb-5 text-center">
+            MY <span className="text-red">SKILLS</span> &{" "}
+            <span className="text-yellow">EXPERIENCES</span>
           </p>
 
-          <LineGradient width="w-1/3" />
+          <div className="flex justify-center">
+            <LineGradient width="w-2/4" />
+          </div>
 
+          {/* 
           <p className="mt-10 mb-7">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
             officiis explicabo dolores nemo.
-          </p>
+          </p> */}
         </motion.div>
 
-        <div className="mt-16 md:mt-0">
+        {/* <div className="mt-16 md:mt-0">
           {isAboveLarge ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10
@@ -47,7 +51,7 @@ const MySkills = () => {
           ) : (
             <img alt="skills" className="z-10" src={SkillsPic} />
           )}
-        </div>
+        </div> */}
       </div>
 
       {/* SKILLS */}
