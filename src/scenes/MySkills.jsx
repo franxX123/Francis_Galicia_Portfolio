@@ -43,7 +43,7 @@ const MySkills = () => {
   return (
     <section id="skills" className="pt-10 pb-24">
       {/* Header and image section */}
-      <div className="flex justify-center gap-16 mt-32 ">
+      <div className="flex justify-center gap-16 mt-32 text-[#f7d4e7]">
         <motion.div
           className="md:w-2/3"
           initial="hidden"
@@ -70,77 +70,79 @@ const MySkills = () => {
       </div>
 
       {/* SKILLS AND EXPERIENCE */}
-      <div className="md:flex md:justify-center mt-24 gap-24">
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-8 gap-y-10 text-slate-200">
+      <div className="md:flex md:justify-center mt-24 gap-[156px]">
+        {/* TECH STACK */}
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-8 gap-y-10">
           {skillImages.map((el, idx) => {
-            console.log(el.bgColor);
+            // console.log(el.bgColor);
             return (
               <div
                 key={idx}
                 className="flex flex-col justify-center items-center"
               >
                 <div
-                  className={`w-[92px] h-[92px] flex flex-col justify-center items-center rounded-full bg-[#fef1cd]`}
+                  className={`group w-[92px] h-[92px] flex flex-col justify-center items-center rounded-full bg-[#fef1cd]`}
                 >
-                  <img className="w-[64px]" src={el.img} alt="tailwind" />
+                  <img
+                    className="group-hover:scale-110 transition duration-200 w-[64px]"
+                    src={el.img}
+                    alt="tailwind"
+                  />
                 </div>
-                <p className="text-center mt-2 ">{el.name}</p>
+                <p className="text-center mt-2">{el.name}</p>
               </div>
             );
           })}
         </div>
 
-        {/* Experience Timeline */}
+        {/* EXPERIENCE Timeline */}
         <div className="relative flex flex-col gap-y-[72px] sm:mt-0 mt-[72px] text-slate-200 -z-20">
           <div
             className={
-              "h-0.5 w-[400px] bg-gradient-rainblue absolute rotate-90 top-[191px] -left-[182px] -z-10"
+              "h-0.5 w-[360px] bg-gradient-rainblue absolute rotate-90 top-[173px] -left-[163px] -z-10"
             }
           />
 
           <div className="flex flex-grow-0 gap-[44px]">
-            <div className="flex justify-center text-yellow font-semibold bg-[#010026] h-[24px]">
-              2022
+            <div className="flex justify-center text-blue font-semibold bg-[#010026] h-[24px]">
+              2018
             </div>
             <div className="flex flex-col">
-              <h2 className="text-md font-bold">Senior Product Designer</h2>
-              <p className="text-sm text-slate-300">Amazon Inc.</p>
+              <h2 className="text-md font-bold">
+                Started Computer Science B.A
+              </h2>
+              <p className="text-sm text-slate-300 mt-1">
+                York University, Lassonde School of Engineering
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-grow-0 gap-[44px]">
+            <div className="flex justify-center text-blue font-semibold bg-[#010026] h-[24px]">
+              2021
+            </div>
+            <div className="flex flex-col">
+              <h2 className="text-md font-bold">
+                Software Engineer Internship
+              </h2>
+              <p className="text-sm text-slate-300 mt-1">
+                Customer Discovery Inc.
+              </p>
             </div>
           </div>
 
           <div className="flex gap-[44px]">
             <div className="flex flex-none justify-center text-yellow font-semibold bg-[#010026] h-[24px]">
-              2020
-            </div>
-            <div className="flex flex-col gap-y-5">
-              <div>
-                <h2 className="text-md font-bold">
-                  Senior WP Frontend Developer
-                </h2>
-                <p className="text-sm text-slate-300">Envato</p>
-              </div>
-              <div>
-                <h2 className="text-md font-bold">
-                  Senior WP Frontend Developer
-                </h2>
-                <p className="text-sm text-slate-300">Envato</p>
-              </div>
-
-              <div>
-                <h2 className="text-md font-bold">
-                  Senior WP Frontend Developer
-                </h2>
-                <p className="text-sm text-slate-300">Envato</p>
-              </div>
-            </div>
-          </div>
-          <div className="flex gap-[44px]">
-            <div className="flex flex-none justify-center text-yellow font-semibold bg-[#010026] h-[24px]">
               2022
             </div>
+
             <div className="flex flex-col">
-              <h2 className="text-md font-bold">Chief Executive Officer CEO</h2>
-              <p className="text-sm text-slate-300">Google</p>
+              <h2 className="text-md font-bold">
+                Graduated Computer Science B.A
+              </h2>
+              <p className="text-sm text-slate-300 mt-1">
+                York University, Lassonde School of Engineering
+              </p>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
-import ProfilePic from "../assets/francis_galicia.jpg";
+import ProfilePic from "../assets/francis_galicia.png";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Landing = ({ setSelectedPage }) => {
@@ -15,10 +15,10 @@ const Landing = ({ setSelectedPage }) => {
       {/* IMAGE SECTION */}
       <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
-          <div className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:w-full .before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]">
+          <div className="relative z-0 ml-20 before:absolute before:rounded-t-full before:-top-20 before:-left-20 before:w-full .before:max-w-[400px] before:h-full before:border-2 before:border-blue before:z-[-1]">
             <img
               alt="profile"
-              className=" hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[500px]"
+              className="rounded-t-full z-10 w-full max-w-[400px] md:max-w-[500px]"
               src={ProfilePic}
             />
           </div>
@@ -26,7 +26,7 @@ const Landing = ({ setSelectedPage }) => {
           <div>
             <img
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[500px]"
+              className="rounded-t-full hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[500px]"
               src={ProfilePic}
             />
           </div>
@@ -55,15 +55,21 @@ const Landing = ({ setSelectedPage }) => {
               // NOTE: Before pseudo element is to add a backGroundImage to a span element.
               // z-index shows the background in the back and the text in the front.
               className={
-                "xs:relative xs:font-semibold height:100% z-20 before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
+                "xs:relative xs:font-semibold height:100% bg-clip-text text-transparent bg-gradient-rainblue"
               }
             >
               Galicia
             </span>
           </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-            reprehenderit quos cupiditate consectetur officia!
+          <p className="leading-relaxed mt-10 mb-7 text-[14px] text-center md:text-start">
+            A 2022{" "}
+            <span className="font-semibold text-blue">
+              Computer Science Graduate
+            </span>{" "}
+            from The Lassonde School of Engineering at York University,
+            specializing in{" "}
+            <span className="font-semibold text-red">Frontend</span> and backend
+            development.
           </p>
         </motion.div>
 
@@ -95,7 +101,7 @@ const Landing = ({ setSelectedPage }) => {
             href="#contact"
           >
             <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
-              Let's Talk
+              Download CV
             </div>
           </AnchorLink>
         </motion.div>
