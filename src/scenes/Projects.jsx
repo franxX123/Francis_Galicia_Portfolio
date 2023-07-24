@@ -40,7 +40,7 @@ const Project = ({
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">{description}</p>
+        <p className="mt-5">{description}</p>
         <div className="mt-5 flex justify-center gap-6">
           <Link
             className="flex px-4 py-2 text-slate-200 font-md border border-red bg-red rounded-full"
@@ -111,25 +111,28 @@ const Projects = () => {
           <Project
             title="Forkify"
             url="https://github.com/franxX123/Forkify"
+            description="Share and save your favorite recipes!"
             project={Project1}
           />
           <Project
             title="Crown Clothing"
             url="https://github.com/franxX123/Crown-Clothing-01"
+            description="Buy new clothes online with us."
             project={Project2}
           />
 
           {/* PROJECT ROW 2 */}
           <Project
-            title="Fast React Pizza"
+            title="Frank's Pizzarie"
             url="https://github.com/franxX123/fast-react-pizza"
+            description="Fresh from oven, delivered to your door."
             project={Project3}
           />
           <Project
-            title="React Dashboard"
+            title="Analytica"
             url="https://github.com/franxX123/react-dashboard"
             project={Project4}
-            description="React Dashboard is a visual analytics dashboard for visualizing key data patterns."
+            description="Visualize data patterns with our analytics dashboard."
           />
           <div className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold">
             SMOOTH USER EXPERIENCE

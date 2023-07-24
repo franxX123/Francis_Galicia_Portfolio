@@ -68,7 +68,7 @@ const Landing = ({ setSelectedPage }) => {
             </span>{" "}
             from The Lassonde School of Engineering at York University,
             specializing in{" "}
-            <span className="font-semibold text-red">Frontend</span> and backend
+            <span className="font-semibold text-red">Frontend</span>{" "}
             development.
           </p>
         </motion.div>
@@ -101,7 +101,7 @@ const Landing = ({ setSelectedPage }) => {
             href="#contact"
           >
             <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
-              Download CV
+              Let's Talk
             </div>
           </AnchorLink>
         </motion.div>
