@@ -66,10 +66,10 @@ const Landing = ({ setSelectedPage }) => {
             <span className="font-semibold text-blue">
               Computer Science Graduate
             </span>{" "}
-            from The Lassonde School of Engineering at York University,
-            specializing in{" "}
-            <span className="font-semibold text-red">Frontend</span>{" "}
-            development.
+            from York University, specializing in{" "}
+            <span className="font-semibold text-red">Full-Stack Engineer </span>{" "}
+            using JavaScript, React, and Node. Dedicated, collaborative,
+            adaptable, self-driven, and a continuous learner
           </p>
         </motion.div>
 
